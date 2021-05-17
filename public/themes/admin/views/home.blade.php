@@ -1,6 +1,6 @@
 <div class="main">
     <div class="main_full fb-clearfix" style="margin-top: 15px;">
-        <div class="layui-col-md12">
+        <div class="layui-col-md12 layui-card-box-home-block">
             <div class="layui-card-box layui-col-space15  fb-clearfix">
                 <div class="layui-col-sm6 layui-col-md3">
                     <div class="layui-card">
@@ -162,16 +162,15 @@
                             <b>本月业务员业绩概览</b>
                             <span class="layui-badge layui-bg-red layuiadmin-badge">业绩</span>
                         </div>
-                        <div class="layui-card-body layuiadmin-card-list" >
+                        <div class="layui-card-body layuiadmin-card-list"  style="height: {!! count($salesmen)/4*220 !!}px;">
                             @foreach($salesmen as $key => $salesman)
-							<div class="layui-col-sm3 layui-col-md3">
-								<div class="layui-col-sm12 layui-col-md12">
-									<div id="Monthly-{{ $salesman['id'] }}">
-									
-								
-									</div>
-								</div>
-								
+							<div class="layui-col-sm3 layui-col-md3" >
+
+                                <div id="Monthly-{{ $salesman['id'] }}" style="width: 100%;height: 220px;">
+
+
+                                </div>
+
 							</div>
                             @endforeach
 
